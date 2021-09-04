@@ -1,28 +1,44 @@
+import Container from './components/Container/Container';
+import Section from './components/Section /Section';
+
 import Profile from './components/Profile_comp/Profile';
-import Statistics from './components/Statistics_section/Statistics';
 import user from './components/Profile_comp/user.json';
+
+import Statistics from './components/Statistics_section/Statistics';
 import statData from './components/Statistics_section/statistical-data.json';
 
-import Section from './components/Statistics_section/Section';
+import FriendList from './components/FriendsList_comp/FriendList';
+import friends from './components/FriendsList_comp/friends.json';
 
-
+import TransactionHistory from './components/Transactions/TransactionHistory';
+import transactions from './components/Transactions/transactions.json';
 
 export default function App() {
   return (
-    <div>
-      <Profile
-        name={user.name}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        followers={user.stats.followers}
-        views={user.stats.views}
-        likes={user.stats.likes} />
+    <Container>
+      <Section>
+        <Profile
+          name={user.name}
+          tag={user.tag}
+          location={user.location}
+          avatar={user.avatar}
+          followers={user.stats.followers}
+          views={user.stats.views}
+          likes={user.stats.likes}
+        />
+      </Section>
+
       <Section>
         <Statistics stats={statData} />
       </Section>
-      {/* <Section /> */}
-      
-    </div>
+
+      <Section>
+        <FriendList friends={friends} />
+      </Section>
+
+      <Section>
+        <TransactionHistory items={transactions} />
+      </Section>
+    </Container>
   );
 }
