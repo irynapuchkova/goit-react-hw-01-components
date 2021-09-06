@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import s from './Section.module.css';
 
 export default function Section({ title, children }) {
-  console.log(children);
+  // console.log(children);
   return (
     <section className={s.section}>
       {title ?? <h2>{title}</h2>}

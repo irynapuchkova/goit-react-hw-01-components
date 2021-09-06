@@ -3,30 +3,19 @@ import { FaChrome } from 'react-icons/fa';
 
 import s from './FrienList.module.css';
 import defaultImg from '../Profile_comp/default-user2.png';
-// import { directive } from '@babel/types';
 
 export default function FriendListItem({ id, avatar, name, isOnline }) {
-  // console.log(avatar);
-  // const noAvatar = " " || undefined || null || false;
-  // if (avatar !== true) {
-  //   avatar = defaultImg;
-  // }
-  // console.log(avatar);
+  if (avatar !== true) {
+    avatar = defaultImg;
+  }
 
   return (
-    <div className={s.friend} key={id}>
-      {/* <li className={s.friend} key={id}> */}
+    <div className={s.friend}>
       <span className={s.status}>
         <FaChrome color={isOnline === true ? 'green' : 'red'} />
       </span>
-      <img
-        className={s.avatar}
-        src={(avatar = undefined ? avatar : defaultImg)}
-        alt={name}
-        width="48"
-      />
+      <img className={s.avatar} src={avatar} alt={name} width="48" />
       <p className={s.name}>{name}</p>
-      {/* </li> */}
     </div>
   );
 }

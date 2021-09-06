@@ -29,6 +29,28 @@
   width: calc(100% / 5);
 }
 
+.docx {
+  composes: item;
+  background-color: green;
+}
+.pdf {
+  composes: item;
+  background-color: greenyellow;
+}
+.psd {
+  composes: item;
+  background-color: grey;
+}
+.pdf {
+  composes: item;
+  background-color: hotpink;
+}
+
+.mp3 {
+  composes: item;
+  background-color: lightblue;
+}
+
 .percentage {
   padding-top: 5px;
 }
