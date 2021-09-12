@@ -1,14 +1,14 @@
 import Container from './components/Container/Container';
 import Section from './components/Section /Section';
 
-import Profile from './components/Profile_comp/Profile';
-import user from './components/Profile_comp/user.json';
+import Profile from './components/Profile/Profile';
+import user from './components/Profile/user.json';
 
-import Statistics from './components/Statistics_section/Statistics';
-import statData from './components/Statistics_section/statistical-data.json';
+import Statistics from './components/Statistics/Statistics';
+import statData from './components/Statistics/statistical-data.json';
 
-import FriendList from './components/FriendsList_comp/FriendList';
-import friends from './components/FriendsList_comp/friends.json';
+import FriendList from './components/FriendsList/FriendList';
+import friends from './components/FriendsList/friends.json';
 
 import TransactionHistory from './components/Transactions/TransactionHistory';
 import transactions from './components/Transactions/transactions.json';
@@ -27,7 +27,7 @@ export default function App() {
       </Section>
 
       <Section>
-        <Statistics stats={statData} />
+        <Statistics title="Upload stats" stats={statData} />
       </Section>
 
       <Section>

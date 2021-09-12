@@ -5,7 +5,7 @@ export default function Section({ title, children }) {
   // console.log(children);
   return (
     <section className={s.section}>
-      {title ?? <h2>{title}</h2>}
+      {title && <h2>{title}</h2>}
       {children}
     </section>
   );

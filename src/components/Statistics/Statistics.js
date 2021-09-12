@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import StatisticsItem from './StatisticsItem';
 import s from './Statistics.module.css';
 
-export default function Statistics({ stats, title = 'Upload stats' }) {
+export default function Statistics({ stats, title }) {
   return (
     <div className={s.stats}>
-      <h2 className={s.title}>{title}</h2>
+      {title && <h2 className={s.title}>{title}</h2>}
       <ul className={s.items}>
         {stats.map(({ id, label, percentage }) => (
           <StatisticsItem

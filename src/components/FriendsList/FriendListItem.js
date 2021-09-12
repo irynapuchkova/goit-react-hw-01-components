@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { FaChrome } from 'react-icons/fa';
 
 import s from './FrienList.module.css';
-import defaultImg from '../Profile_comp/default-user2.png';
+import defaultImg from '../Profile/default-user2.png';
 
 export default function FriendListItem({ id, avatar, name, isOnline }) {
   if (avatar !== true) {

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import defaultImg from '../Profile_comp/default-user2.png';
+import defaultImg from './default-user2.png';
 import s from './Profile.module.css';
 
 // const defaultImg = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7pOXl4GUcuaWXNf2JQ3GCLhfYq31JExa47w&usqp=CAU';
